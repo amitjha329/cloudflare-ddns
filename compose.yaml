@@ -1,0 +1,14 @@
+services:
+  server:
+    build:
+      context: .
+    ports:
+      - 8000:8000
+    env_file:
+      - .env
+    volumes:
+      - db-data:/app
+
+volumes:
+  db-data:
+
